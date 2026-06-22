@@ -3,19 +3,19 @@
 @theme {
   /* COLORS */
   --color-test: red;
-  --color-primary: #00BAED;
-  --color-secundary: #2A45CD;
+  --color-primary: #00baed;
+  --color-secundary: #2a45cd;
   --color-bg: light-dark(#eef1f7, #0a0d16);
   --color-bg-transp: color-mix(in srgb, var(--color-bg), transparent 50%);
   --color-bg-hover: oklch(from var(--color-bg) calc(l + 0.08) calc(c + 0.03) h);
   --color-bg3: light-dark(#f5f7fc, #161c2a);
-  --color-line: light-dark(rgba(12, 20, 40, .10), rgba(255, 255, 255, .08));
-  --color-line2: light-dark(rgba(12, 20, 40, .18), rgba(255, 255, 255, .16));
+  --color-line: light-dark(rgba(12, 20, 40, 0.1), rgba(255, 255, 255, 0.08));
+  --color-line2: light-dark(rgba(12, 20, 40, 0.18), rgba(255, 255, 255, 0.16));
   --color-tx: light-dark(#0f1626, #e9edf6);
   --color-dim: light-dark(#586079, #8b94a8);
-  --color-ac: light-dark(#1f6bff, #2A45CD);
-  --color-ac2: light-dark(#0aa0c4, #00BAED);
-  --color-glow: light-dark(rgba(31, 107, 255, .16), rgba(46, 123, 255, .30));
+  --color-ac: light-dark(#1f6bff, #2a45cd);
+  --color-ac2: light-dark(#0aa0c4, #00baed);
+  --color-glow: light-dark(rgba(31, 107, 255, 0.16), rgba(46, 123, 255, 0.3));
   --color-shadow:
     light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) 0 10px 15px -3px,
     light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)) 0 4px 6px -2px;
@@ -24,16 +24,15 @@
   /* --text-sm: 8px; */
 }
 
-
 @layer base {
   :root {
-      color-scheme: dark light;
+    color-scheme: dark light;
   }
 
   :root[data-theme="light"] {
     color-scheme: light;
   }
-  
+
   :root[data-theme="dark"] {
     color-scheme: dark;
   }
@@ -55,7 +54,7 @@
 .container {
   max-width: 1126px;
   margin: 0 auto;
-} 
+}
 
 body {
   margin: 0;
