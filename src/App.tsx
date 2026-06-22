@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import './App.css'
 import HeaderLink from './components/HeaderLink'
+import hmLogo from './assets/hm_logo.svg'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ function App() {
         <div className="container py-4 flex items-center justify-between">
           <div className="flex gap-2 items-center justify-center">
             <div className="">
-              <img className="w-12 h-12 rounded-full" src="../src/assets/hm_logo.png" alt="Profile" />
+              <img className="w-10 h-10 rounded-full" src={hmLogo} alt="Profile" />
             </div>
             <div className="flex flex-col items-start justify-center leading-3">
               <span className="text-sm font-bold">Hector Merla</span>
