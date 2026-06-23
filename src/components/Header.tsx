@@ -1,5 +1,5 @@
 import HeaderLink from "./HeaderLink"
-import hmLogo from "../assets/hm_logo.svg"
+import Logo from "./Logo"
 
 const Header = () => {
   return (
@@ -8,11 +8,7 @@ const Header = () => {
         <a href="/">
           <div className="flex gap-2 items-center justify-center">
             <div className="">
-              <img
-                className="w-10 h-10 rounded-full"
-                src={hmLogo}
-                alt="Profile"
-              />
+              <Logo />
             </div>
             <div className="flex flex-col items-start justify-center leading-4">
               <span className="text-md font-bold font-space-grotesk">

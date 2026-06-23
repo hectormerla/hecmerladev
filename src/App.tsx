@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import "./App.css"
 import ExperienceRow from "./components/ExperienceRow"
 import GradientCircle from "./components/GradientCircle"
@@ -9,10 +8,22 @@ import SectionSubtitle from "./components/SectionSubtitle"
 import ToolCard from "./components/ToolCard"
 import WorkCard from "./components/WorkCard"
 import cvBuilder from "./assets/cv_builder.svg"
+import Logo from "./components/Logo"
+import Button from "./components/Button"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import {
+  faGithub,
+  faLinkedinIn,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Mail } from "lucide-react"
+import Footer from "./components/Footer"
+
+// Add the icons to your project's library
+library.add(faGithub, faLinkedinIn, faXTwitter)
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <div>
       <GradientCircle
@@ -88,6 +99,7 @@ function App() {
             toolName="CV Builder"
             description="A tool for creating professional CVs with ease."
             isFree
+            appUrl="https://cvbuilder.hecmerla.dev"
           />
           <ToolCard
             variant="planned"
@@ -104,6 +116,47 @@ function App() {
           />
         </div>
       </LandingSection>
+
+      <LandingSection variant="dark">
+        <div className="flex flex-col items-center justify-center text-center gap-4">
+          <Logo size="80px" />
+          <h2>Let's build together</h2>
+          <p className="text-dim text-md my-4 max-w-[450px]">
+            I'm always open to new opportunities and collaborations. Feel free
+            to reach out if you have a project in mind or just want to say hi!
+          </p>
+          <Button href="mailto:your-email@example.com">
+            <div className="flex items-center gap-2">
+              <Mail size={16} />
+              Contact Me
+            </div>
+          </Button>
+          <div className="flex gap-3 my-4">
+            <Button
+              href="https://github.com/hectormerla"
+              variant="secondary"
+              isIconButton
+            >
+              <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
+            </Button>
+            <Button
+              href="https://www.linkedin.com/in/hectormerla/"
+              variant="secondary"
+              isIconButton
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin-in"]} size="lg" />
+            </Button>
+            <Button
+              href="https://x.com/HectorMerla"
+              variant="secondary"
+              isIconButton
+            >
+              <FontAwesomeIcon icon={["fab", "x-twitter"]} size="lg" />
+            </Button>
+          </div>
+        </div>
+      </LandingSection>
+      <Footer />
     </div>
   )
 }

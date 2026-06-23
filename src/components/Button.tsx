@@ -10,24 +10,33 @@ const Button = ({
   onClick,
   href,
   variant = "primary",
+  isIconButton = false,
 }: {
   children: React.ReactNode
   onClick?: () => void
   href?: string
   variant?: keyof typeof variantClassName
+  isIconButton?: boolean
 }) => {
   const className = `${baseClassName} ${variantClassName[variant]}`
 
   if (href) {
     return (
-      <a href={href} onClick={onClick} className={className}>
+      <a
+        href={href}
+        onClick={onClick}
+        className={className + (isIconButton ? " px-4!" : "")}
+      >
         {children}
       </a>
     )
   }
 
   return (
-    <button onClick={onClick} className={className}>
+    <button
+      onClick={onClick}
+      className={className + (isIconButton ? " px-4!" : "")}
+    >
       {children}
     </button>
   )
