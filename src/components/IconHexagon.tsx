@@ -1,8 +1,16 @@
-const IconHexagon = ({ className }: { className?: string }) => {
+const IconHexagon = ({
+  className,
+  children,
+}: {
+  className?: string
+  children?: React.ReactNode
+}) => {
   return (
     <div
-      className={`w-16 h-18  border border-line clip-hexagon ${className}`}
-    ></div>
+      className={`flex items-center justify-center w-16 h-18  border border-line clip-hexagon ${className}`}
+    >
+      {children}
+    </div>
   )
 }
 

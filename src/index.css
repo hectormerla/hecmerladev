@@ -16,7 +16,7 @@
   --color-line2: light-dark(rgba(12, 20, 40, 0.18), rgba(255, 255, 255, 0.16));
   --color-tx: light-dark(#0f1626, #e9edf6);
   --color-dim: light-dark(#586079, #8b94a8);
-  --color-ac: light-dark(#1f6bff, #2a45cd);
+  --color-ac: light-dark(#1f6bff, #2e7bff);
   --color-ac2: light-dark(#0aa0c4, #00baed);
   --color-glow: light-dark(rgba(31, 107, 255, 0.16), rgba(46, 123, 255, 0.3));
   --color-shadow:

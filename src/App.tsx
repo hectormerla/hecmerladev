@@ -8,6 +8,7 @@ import LandingSection from "./components/LandingSection"
 import SectionSubtitle from "./components/SectionSubtitle"
 import ToolCard from "./components/ToolCard"
 import WorkCard from "./components/WorkCard"
+import cvBuilder from "./assets/cv_builder.svg"
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -81,9 +82,26 @@ function App() {
         <SectionSubtitle>The Lab</SectionSubtitle>
         <h2>Tools I'm building</h2>
         <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">
-          <ToolCard variant="live" />
-          <ToolCard variant="beta" />
-          <ToolCard variant="soon" />
+          <ToolCard
+            variant="live"
+            icon={<img src={cvBuilder} alt="CV Builder" width="36" />}
+            toolName="CV Builder"
+            description="A tool for creating professional CVs with ease."
+            isFree
+          />
+          <ToolCard
+            variant="planned"
+            // icon={<img src="" alt="Grocery List App" width="36" />}
+            toolName="Grocery List App"
+            description="An app to help you manage your grocery shopping efficiently."
+            isFreemium
+          />
+          <ToolCard
+            variant="beta"
+            // icon={<img src="" alt="Project Tracker" width="36" />}
+            toolName="Project Tracker"
+            description="A tool to track and manage your projects effectively."
+          />
         </div>
       </LandingSection>
     </div>
