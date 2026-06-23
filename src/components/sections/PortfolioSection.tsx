@@ -34,6 +34,13 @@ const PROJECTS = [
     description: "Early childhood web app for parents.",
     stack: ["React", "TypeScript", "Styled Components"],
   },
+  {
+    category: "Boutique",
+    title: "Gramatos",
+    description:
+      "Web for a boutique artisanal printing and graphic design studio.",
+    stack: ["React", "TypeScript", "Styled Components"],
+  },
 ]
 
 const PortfolioSection = () => {
