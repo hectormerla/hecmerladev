@@ -5,7 +5,7 @@ import StatusBadge from "./StatusBadge"
 
 const Hero = () => {
   return (
-    <section className="container py-24 px-7 gap-8 max-w-[1200px] mx-auto grid md:grid-cols-2">
+    <section className="container py-24 gap-8 max-w-[1200px] mx-auto grid md:grid-cols-2">
       <div className="flex flex-col items-start">
         <StatusBadge>Available for new projects</StatusBadge>
         <h1 className="mb-7 text-left font-bold leading-14">
