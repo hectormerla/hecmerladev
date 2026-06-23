@@ -8,12 +8,14 @@ const Hero = () => {
     <section className="container py-24 px-7 gap-8 max-w-[1200px] mx-auto grid md:grid-cols-2">
       <div className="flex flex-col items-start">
         <StatusBadge>Available for new projects</StatusBadge>
-        <h1 className="mb-7 text-[clamp(38px,5.6vw,68px)] text-left font-bold leading-14">
+        <h1 className="mb-7 text-left font-bold leading-14">
           I build fast, thoughtful
           <br />
-          <span className="text-gradient-brand">web experiences</span>
+          <span className="text-gradient-brand font-bold whitespace-nowrap">
+            web experiences.
+          </span>
         </h1>
-        <p className="mb-7 text-md text-dim text-left leading-relaxed">
+        <p className="mb-7 max-w-[480px] text-md text-dim text-left leading-relaxed">
           Hector Merla — web developer with 8+ years shipping production apps,
           design systems and the freemium tools below. Part résumé, part
           portfolio, part workshop.

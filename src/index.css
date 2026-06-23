@@ -6,6 +6,7 @@
   --color-playground: #3e595f;
   --color-primary: #00baed;
   --color-secondary: #2a45cd;
+  --color-tertiary: #f5b740;
   --color-bg: light-dark(#eef1f7, #0a0d16);
   --color-bg-transp: color-mix(in srgb, var(--color-bg), transparent 20%);
   --color-bg-hover: oklch(from var(--color-bg) calc(l + 0.08) calc(c + 0.03) h);
@@ -110,16 +111,28 @@
   }
 }
 
+@utility bg-stripes {
+  aspect-ratio: 16 / 10;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-bg3),
+    var(--color-bg3) 11px,
+    var(--color-bg2) 11px,
+    var(--color-bg2) 22px
+  );
+}
+
 #root {
-  color: var(--dim);
-  background-color: var(--color-bg);
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+
+  color: var(--dim);
+  background-color: var(--color-bg);
 }
 
 .container {
@@ -139,4 +152,16 @@ h5,
 h6 {
   font-family: var(--font-space-grotesk);
   font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(38px, 5.6vw, 68px);
+}
+
+h2 {
+  font-size: clamp(28px, 3.6vw, 42px);
+}
+
+h3 {
+  font-size: 20px;
 }
