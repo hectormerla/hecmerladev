@@ -24,6 +24,7 @@ const Button = ({
     return (
       <a
         href={href}
+        target="_blank"
         onClick={onClick}
         className={className + (isIconButton ? " px-4!" : "")}
       >

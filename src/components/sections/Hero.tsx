@@ -1,7 +1,7 @@
-import Button from "./Button"
-import FloatingHexagons from "./FloatingHexagons"
-import GradientCircle from "./GradientCircle"
-import StatusBadge from "./StatusBadge"
+import Button from "../Button"
+import FloatingHexagons from "../FloatingHexagons"
+import GradientCircle from "../GradientCircle"
+import StatusBadge from "../StatusBadge"
 
 const Hero = () => {
   return (
