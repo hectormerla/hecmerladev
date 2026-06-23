@@ -19,8 +19,8 @@ const GradientCircle = ({
 }) => {
   return (
     <div
-      className={`absolute w-[${width}] h-[${height}] rounded-full bg-glow-radial blur-[${blur}] pointer-events-none z-0 ${position}`}
-      style={{ top, left, right, bottom }}
+      className={`absolute rounded-full bg-glow-radial blur-[${blur}] pointer-events-none z-0 ${position}`}
+      style={{ width, height, top, left, right, bottom }}
     ></div>
   )
 }
