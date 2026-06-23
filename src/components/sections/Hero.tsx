@@ -9,16 +9,15 @@ const Hero = () => {
       <div className="flex flex-col items-start">
         <StatusBadge>Available for new projects</StatusBadge>
         <h1 className="mb-7 text-left font-bold leading-14">
-          I build fast, thoughtful
+          Turning ideas into
           <br />
           <span className="text-gradient-brand font-bold whitespace-nowrap">
-            web experiences.
+            fast web products
           </span>
         </h1>
         <p className="mb-7 max-w-[480px] text-md text-dim text-left leading-relaxed">
-          Hector Merla — web developer with 8+ years shipping production apps,
-          design systems and the freemium tools below. Part résumé, part
-          portfolio, part workshop.
+          Web developer with 8+ years building production apps, design systems,
+          and the freemium tools below.
         </p>
         <div className="flex items-center justify-start gap-4">
           <Button href="#work">View my work →</Button>

@@ -1,5 +1,5 @@
 import "./App.css"
-import Header from "./components/Header"
+import Header from "./components/sections/Header"
 import Hero from "./components/sections/Hero"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import Footer from "./components/sections/Footer"

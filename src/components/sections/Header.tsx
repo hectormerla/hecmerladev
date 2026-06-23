@@ -1,26 +1,11 @@
-import HeaderLink from "./HeaderLink"
-import Logo from "./Logo"
+import HeaderLink from "../HeaderLink"
+import LogoBanner from "../LogoBanner"
 
 const Header = () => {
   return (
     <header className="sticky z-50 bg-bg-transp flex items-center justify-between border-b border-b-line">
       <div className="container py-4 flex items-center justify-between">
-        <a href="/">
-          <div className="flex gap-2 items-center justify-center">
-            <div className="">
-              <Logo />
-            </div>
-            <div className="flex flex-col items-start justify-center leading-4">
-              <span className="text-md font-bold font-space-grotesk">
-                Hector Merla
-              </span>
-              <span className="text-xs text-dim font-jetbrains uppercase">
-                Web Developer
-              </span>
-            </div>
-          </div>
-        </a>
-
+        <LogoBanner />
         <nav>
           <ul className="flex items-center justify-end gap-4">
             <li>
