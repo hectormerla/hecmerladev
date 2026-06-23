@@ -15,15 +15,15 @@ const TOOLS: ComponentProps<typeof ToolCard>[] = [
   },
   {
     variant: "building",
-    toolName: "Grocery List App",
+    toolName: "Grocery List Mobile App",
     description: "An app to help you manage your grocery shopping efficiently.",
     isFreemium: true,
   },
-  {
-    variant: "planned",
-    toolName: "CSVX Desktop",
-    description: "An app to work with .csvx files.",
-  },
+  // {
+  //   variant: "planned",
+  //   toolName: "CSVX Desktop",
+  //   description: "An app to work with .csvx files.",
+  // },
 ]
 
 const ToolsSection = () => {

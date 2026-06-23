@@ -112,7 +112,6 @@
 }
 
 @utility bg-stripes {
-  aspect-ratio: 16 / 10;
   background: repeating-linear-gradient(
     135deg,
     var(--color-bg3),

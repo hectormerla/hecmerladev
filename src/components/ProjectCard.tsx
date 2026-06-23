@@ -13,7 +13,7 @@ const ProjectCard = ({
 }) => {
   return (
     <article className="flex flex-col items-start justify-start rounded-xl bg-bg2 border border-line z-1">
-      <div className="grid w-full place-items-center bg-stripes border-b border-line"></div>
+      <div className="grid w-full place-items-center bg-stripes border-b border-line aspect-16/8"></div>
       <div className="p-6">
         <p className="text-xs font-medium text-ac uppercase font-jetbrains">
           {category}
