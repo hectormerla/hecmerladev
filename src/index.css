@@ -3,6 +3,7 @@
 @theme {
   /* COLORS */
   --color-test: red;
+  --color-playground: #3e595f;
   --color-primary: #00baed;
   --color-secundary: #2a45cd;
   --color-bg: light-dark(#eef1f7, #0a0d16);
@@ -19,9 +20,21 @@
   --color-shadow:
     light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) 0 10px 15px -3px,
     light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)) 0 4px 6px -2px;
+  --shadow-glow: 0 8px 28px var(--color-glow);
 
   /* FONTS SIZES */
   /* --text-sm: 8px; */
+
+  /* KEYFRAMES */
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
 }
 
 @layer base {
@@ -38,10 +51,41 @@
   }
 }
 
+@utility text-gradient-brand {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secundary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback */
+}
+
+@utility bg-gradient-brand {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary) -15%,
+    var(--color-secundary) 145%
+  );
+}
+
+@utility bg-glow-radial {
+  background: radial-gradient(circle, var(--color-glow), transparent 70%);
+}
+
+@utility clip-hexagon {
+  clip-path: polygon(50% 0px, 100% 25%, 100% 75%, 50% 100%, 0px 75%, 0px 25%);
+}
+
+@utility animate-floaty {
+  animation: 7s ease-in-out 0.3s infinite normal none running floaty;
+}
+
 #root {
   color: var(--dim);
-  background-color: gray;
-  background-color: var(--bg);
+  background-color: var(--color-bg);
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
