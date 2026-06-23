@@ -1,3 +1,8 @@
+const bgGlowRadialClassName = {
+  primary: "bg-glow-radial-primary",
+  secondary: "bg-glow-radial-secondary",
+}
+
 const GradientCircle = ({
   position,
   width = "360px",
@@ -7,6 +12,7 @@ const GradientCircle = ({
   right,
   bottom,
   blur = "40px",
+  bgColor,
 }: {
   position?: string
   width?: string
@@ -16,11 +22,20 @@ const GradientCircle = ({
   right?: string
   bottom?: string
   blur?: string
+  bgColor?: keyof typeof bgGlowRadialClassName
 }) => {
   return (
     <div
-      className={`absolute rounded-full bg-glow-radial blur-[${blur}] pointer-events-none z-0 ${position}`}
-      style={{ width, height, top, left, right, bottom }}
+      className={`absolute rounded-full ${bgColor ? bgGlowRadialClassName[bgColor] : "bg-glow-radial"} pointer-events-none z-0 ${position}`}
+      style={{
+        width,
+        height,
+        top,
+        left,
+        right,
+        bottom,
+        filter: `blur(${blur})`,
+      }}
     ></div>
   )
 }

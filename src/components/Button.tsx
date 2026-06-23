@@ -2,7 +2,7 @@ const baseClassName = "px-5 py-3 text-sm rounded-xl  transition-pop"
 
 const variantClassName = {
   primary: "bg-gradient-brand text-white hover:bg-blue-600 shadow-glow",
-  secundary: "bg-bg2 border border-line text-tx",
+  secondary: "bg-bg2 border border-line text-tx",
 }
 
 const Button = ({

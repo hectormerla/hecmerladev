@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
         <div className="flex items-center justify-start gap-4">
           <Button href="#work">View my work →</Button>
-          <Button variant="secundary" href="#contact">
+          <Button variant="secondary" href="#contact">
             Get in touch
           </Button>
         </div>

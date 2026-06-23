@@ -5,7 +5,7 @@
   --color-test: red;
   --color-playground: #3e595f;
   --color-primary: #00baed;
-  --color-secundary: #2a45cd;
+  --color-secondary: #2a45cd;
   --color-bg: light-dark(#eef1f7, #0a0d16);
   --color-bg-transp: color-mix(in srgb, var(--color-bg), transparent 20%);
   --color-bg-hover: oklch(from var(--color-bg) calc(l + 0.08) calc(c + 0.03) h);
@@ -29,16 +29,15 @@
 
   /* FONTS SIZES */
   /* --text-sm: 8px; */
+}
 
-  /* KEYFRAMES */
-  @keyframes floaty {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
   }
 }
 
@@ -60,7 +59,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-primary),
-    var(--color-secundary)
+    var(--color-secondary)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -72,7 +71,7 @@
   background-image: linear-gradient(
     to bottom right,
     var(--color-primary) -15%,
-    var(--color-secundary) 145%
+    var(--color-secondary) 145%
   );
 }
 
@@ -80,12 +79,22 @@
   background: radial-gradient(circle, var(--color-glow), transparent 70%);
 }
 
+@utility bg-glow-radial-* {
+  background: radial-gradient(
+    circle,
+    --value(--color-*, [color]),
+    transparent 30%
+  );
+}
+
 @utility clip-hexagon {
   clip-path: polygon(50% 0px, 100% 25%, 100% 75%, 50% 100%, 0px 75%, 0px 25%);
 }
 
 @utility animate-floaty {
-  animation: 7s ease-in-out 0.3s infinite normal none running floaty;
+  animation-name: floaty;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @utility transition-pop {
