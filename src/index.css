@@ -7,8 +7,9 @@
   --color-primary: #00baed;
   --color-secundary: #2a45cd;
   --color-bg: light-dark(#eef1f7, #0a0d16);
-  --color-bg-transp: color-mix(in srgb, var(--color-bg), transparent 50%);
+  --color-bg-transp: color-mix(in srgb, var(--color-bg), transparent 20%);
   --color-bg-hover: oklch(from var(--color-bg) calc(l + 0.08) calc(c + 0.03) h);
+  --color-bg2: light-dark(#f5f7fc, #10141f);
   --color-bg3: light-dark(#f5f7fc, #161c2a);
   --color-line: light-dark(rgba(12, 20, 40, 0.1), rgba(255, 255, 255, 0.08));
   --color-line2: light-dark(rgba(12, 20, 40, 0.18), rgba(255, 255, 255, 0.16));
@@ -21,6 +22,10 @@
     light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)) 0 10px 15px -3px,
     light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)) 0 4px 6px -2px;
   --shadow-glow: 0 8px 28px var(--color-glow);
+
+  /* FONTS */
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
 
   /* FONTS SIZES */
   /* --text-sm: 8px; */
@@ -83,6 +88,19 @@
   animation: 7s ease-in-out 0.3s infinite normal none running floaty;
 }
 
+@utility transition-pop {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  transform: translateY(0);
+  box-shadow: 0 0 0 transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
 #root {
   color: var(--dim);
   background-color: var(--color-bg);
@@ -105,7 +123,11 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--heading);
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-grotesk);
   font-weight: 500;
 }
