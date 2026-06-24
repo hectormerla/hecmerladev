@@ -16,7 +16,7 @@ const Hero = () => {
           </span>
         </h1>
         <p className="mb-7 max-w-[480px] text-md text-dim text-left leading-relaxed">
-          Web developer with 8+ years building production apps, design systems,
+          Web developer with 8+ years building production apps, client websites,
           and the freemium tools below.
         </p>
         <div className="flex items-center justify-start gap-4">
