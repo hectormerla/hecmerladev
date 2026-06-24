@@ -16,7 +16,7 @@ const ExperienceRow = ({
   stack?: string[]
 }) => {
   return (
-    <div className="grid grid-cols-[180px_1fr] gap-4 py-8 border-t border-line">
+    <div className="grid md:grid-cols-[180px_1fr] gap-4 py-8 border-t border-line">
       <div className="flex items-start gap-4">
         <div
           className={`w-4 h-4 ${isCurrent ? "bg-primary" : "bg-dim"} my-1 clip-hexagon`}

@@ -7,7 +7,7 @@ const HeaderLink = ({
 }) => {
   return (
     <a
-      className="text-sm text-dim hover:bg-bg-hover py-2 px-3 rounded-md transition duration-300"
+      className="text-sm text-dim hover:text-white hover:bg-bg-hover py-2 px-3 rounded-md transition duration-300"
       href={href}
     >
       {children}

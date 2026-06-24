@@ -7,6 +7,7 @@ const variantClassName = {
 
 const Button = ({
   children,
+  className,
   onClick,
   href,
   target,
@@ -15,6 +16,7 @@ const Button = ({
   isIconButton = false,
 }: {
   children: React.ReactNode
+  className?: string
   onClick?: () => void
   href?: string
   target?: string
@@ -22,7 +24,7 @@ const Button = ({
   variant?: keyof typeof variantClassName
   isIconButton?: boolean
 }) => {
-  const className = `${baseClassName} ${variantClassName[variant]}`
+  const mergedClassName = `${baseClassName} ${variantClassName[variant]} ${className}`
 
   if (href) {
     return (
@@ -30,7 +32,7 @@ const Button = ({
         href={href}
         target={isBlank ? "_blank" : target}
         onClick={onClick}
-        className={className + (isIconButton ? " px-4!" : "")}
+        className={mergedClassName + (isIconButton ? " px-4!" : "")}
       >
         {children}
       </a>
@@ -40,7 +42,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={className + (isIconButton ? " px-4!" : "")}
+      className={className + (isIconButton ? " px-4!" : "") + " cursor-pointer"}
     >
       {children}
     </button>
