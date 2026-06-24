@@ -9,7 +9,7 @@ const EXPERIENCE = [
     position: "Senior Experience Engineer",
     company: "Publicis Sapient",
     description:
-      "* Leading frontend development project and CMS integration while serving as a technical reference for the team. Known for rigorous code reviews, component craftsmanship, and a collaborative approach to mentoring peers and driving code quality improvements. Frontend development of AI platform with microfrontends using NextJS and TypeScript.",
+      "* Frontend development project and CMS integration while serving as a technical reference for the team. Known for rigorous code reviews, component craftsmanship, and a collaborative approach to mentoring peers and driving code quality improvements. * Frontend development of AI platform with microfrontends using NextJS and TypeScript.",
     stack: [
       "React",
       "NextJS",
