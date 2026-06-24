@@ -9,12 +9,16 @@ const Button = ({
   children,
   onClick,
   href,
+  target,
+  isBlank,
   variant = "primary",
   isIconButton = false,
 }: {
   children: React.ReactNode
   onClick?: () => void
   href?: string
+  target?: string
+  isBlank?: boolean
   variant?: keyof typeof variantClassName
   isIconButton?: boolean
 }) => {
@@ -24,7 +28,7 @@ const Button = ({
     return (
       <a
         href={href}
-        target="_blank"
+        target={isBlank ? "_blank" : target}
         onClick={onClick}
         className={className + (isIconButton ? " px-4!" : "")}
       >

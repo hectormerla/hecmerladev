@@ -4,37 +4,6 @@ import ProjectCard from "../ProjectCard"
 
 const PROJECTS = [
   {
-    category: "AI",
-    title: "CoreAI",
-    description:
-      "Web App to create workflows with AI Agents to generate Audiences.",
-    stack: ["NextJS", "TypeScript", "TailwindCSS"],
-  },
-  {
-    category: "Landing page",
-    title: "WWC",
-    description: "Site for the Work With Cancer initiative.",
-    stack: ["NextJS", "TypeScript", "Contentful"],
-  },
-  {
-    category: "Health care",
-    title: "Intermountain Health",
-    description: "Web and mobile app for a Health care company.",
-    stack: ["React", "React Native", "TypeScript"],
-  },
-  {
-    category: "Education",
-    title: "Kinedu Educators App",
-    description: "Early childhood web app for schools.",
-    stack: ["React", "TypeScript", "Styled Components"],
-  },
-  {
-    category: "Education",
-    title: "Kinedu Web App",
-    description: "Early childhood web app for parents.",
-    stack: ["React", "TypeScript", "Styled Components"],
-  },
-  {
     category: "Boutique",
     title: "Gramatos",
     description:

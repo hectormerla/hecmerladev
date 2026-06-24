@@ -5,7 +5,7 @@ import StatusBadge from "../StatusBadge"
 
 const Hero = () => {
   return (
-    <section className="container py-24 gap-8 max-w-[1200px] mx-auto grid md:grid-cols-2">
+    <section className="container pt-24 pb-6 gap-8 max-w-[1200px] mx-auto grid md:grid-cols-2">
       <div className="flex flex-col items-start">
         <StatusBadge>Available for new projects</StatusBadge>
         <h1 className="mb-7 text-left font-bold leading-14">
@@ -17,13 +17,13 @@ const Hero = () => {
         </h1>
         <p className="mb-7 max-w-[480px] text-md text-dim text-left leading-relaxed">
           Web developer with 8+ years building production apps, client websites,
-          and the freemium tools below.
+          and web tools — with a pixel-perfect eye for detail.
         </p>
         <div className="flex items-center justify-start gap-4">
-          <Button href="#work">View my work →</Button>
-          <Button variant="secondary" href="#contact">
+          <Button href="#contact">Get in touch</Button>
+          {/* <Button variant="secondary" href="#contact">
             Get in touch
-          </Button>
+          </Button> */}
         </div>
       </div>
 

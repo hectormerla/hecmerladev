@@ -8,9 +8,9 @@ const Header = () => {
         <LogoBanner />
         <nav>
           <ul className="flex items-center justify-end gap-4">
-            <li>
+            {/* <li>
               <HeaderLink href="#work">Work</HeaderLink>
-            </li>
+            </li> */}
             <li>
               <HeaderLink href="#experience">Experience</HeaderLink>
             </li>
