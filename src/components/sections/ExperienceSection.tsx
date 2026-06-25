@@ -86,9 +86,10 @@ const ExperienceSection = () => {
       <SectionSubtitle>Résumé</SectionSubtitle>
       <h2>Experience</h2>
       <div className="flex flex-col w-full">
-        {EXPERIENCE.map((experience) => (
+        {EXPERIENCE.map((experience, index) => (
           <ExperienceRow
             key={experience.position + experience.company}
+            index={index}
             {...experience}
           />
         ))}

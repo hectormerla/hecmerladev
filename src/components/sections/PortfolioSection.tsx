@@ -18,13 +18,14 @@ const PortfolioSection = () => {
       <SectionSubtitle>Portfolio</SectionSubtitle>
       <h2>Projects</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">
-        {PROJECTS.map((project) => (
+        {PROJECTS.map((project, index) => (
           <ProjectCard
             key={project.title}
             category={project.category}
             title={project.title}
             description={project.description}
             stack={project.stack}
+            index={index}
           />
         ))}
       </div>

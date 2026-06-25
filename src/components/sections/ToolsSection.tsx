@@ -32,8 +32,8 @@ const ToolsSection = () => {
       <SectionSubtitle>The Lab</SectionSubtitle>
       <h2>What I'm building</h2>
       <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">
-        {TOOLS.map((tool) => (
-          <ToolCard key={tool.toolName} {...tool} />
+        {TOOLS.map((tool, index) => (
+          <ToolCard key={tool.toolName} index={index} {...tool} />
         ))}
       </div>
     </LandingSection>

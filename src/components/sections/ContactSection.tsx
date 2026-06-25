@@ -3,11 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Button from "../Button"
 import LandingSection from "../LandingSection"
 import Logo from "../Logo"
+import { useInView } from "react-intersection-observer"
 
 const ContactSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
   return (
     <LandingSection id="contact" variant="dark">
-      <div className="flex flex-col items-center justify-center text-center gap-4">
+      <div
+        ref={ref}
+        className={`flex flex-col items-center justify-center text-center gap-4 transition-all duration-500 ease-in ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <Logo size="80px" />
         <h2>Let's build together</h2>
         <p className="text-dim text-md my-4 max-w-[450px]">

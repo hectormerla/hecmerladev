@@ -1,4 +1,5 @@
 import ToolBadge from "./ToolBadge"
+import { useInView } from "react-intersection-observer"
 
 const ExperienceRow = ({
   isCurrent,
@@ -7,6 +8,7 @@ const ExperienceRow = ({
   company,
   description,
   stack = [],
+  index = 0,
 }: {
   isCurrent?: boolean
   date: string
@@ -14,9 +16,19 @@ const ExperienceRow = ({
   company: string
   description: string
   stack?: string[]
+  index?: number
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
   return (
-    <div className="grid md:grid-cols-[180px_1fr] gap-4 py-8 border-t border-line">
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${index * 100}ms` }}
+      className={`grid md:grid-cols-[180px_1fr] gap-4 py-8 border-t border-line transition-all duration-500 ease-in ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+    >
       <div className="flex items-start gap-4">
         <div
           className={`w-4 h-4 ${isCurrent ? "bg-primary" : "bg-dim"} my-1 clip-hexagon`}
