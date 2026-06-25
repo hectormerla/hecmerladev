@@ -14,7 +14,7 @@ const PROJECTS = [
 
 const PortfolioSection = () => {
   return (
-    <LandingSection>
+    <LandingSection id="work">
       <SectionSubtitle>Portfolio</SectionSubtitle>
       <h2>Projects</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">

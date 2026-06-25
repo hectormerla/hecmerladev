@@ -134,6 +134,14 @@
   background-color: var(--color-bg);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
 .container {
   max-width: 1126px;
   margin: 0 auto;

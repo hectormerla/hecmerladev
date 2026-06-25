@@ -82,7 +82,7 @@ const EXPERIENCE = [
 
 const ExperienceSection = () => {
   return (
-    <LandingSection>
+    <LandingSection id="experience">
       <SectionSubtitle>Résumé</SectionSubtitle>
       <h2>Experience</h2>
       <div className="flex flex-col w-full">
