@@ -30,6 +30,7 @@ const ContactSection = () => {
         </Button> */}
         <div className="flex gap-3 my-4">
           <Button
+            ariaLabel="Hector Merla on Github"
             isBlank
             href="https://github.com/hectormerla"
             variant="secondary"
@@ -38,6 +39,7 @@ const ContactSection = () => {
             <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
           </Button>
           <Button
+            ariaLabel="Hector Merla on Linkedin"
             isBlank
             href="https://www.linkedin.com/in/hectormerla/"
             variant="secondary"
@@ -46,6 +48,7 @@ const ContactSection = () => {
             <FontAwesomeIcon icon={["fab", "linkedin-in"]} size="lg" />
           </Button>
           <Button
+            ariaLabel="Hector Merla on Twitter"
             isBlank
             href="https://x.com/HectorMerla"
             variant="secondary"

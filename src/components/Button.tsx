@@ -14,6 +14,7 @@ const Button = ({
   isBlank,
   variant = "primary",
   isIconButton = false,
+  ariaLabel = "",
 }: {
   children: React.ReactNode
   className?: string
@@ -23,12 +24,14 @@ const Button = ({
   isBlank?: boolean
   variant?: keyof typeof variantClassName
   isIconButton?: boolean
+  ariaLabel?: string
 }) => {
   const mergedClassName = `${baseClassName} ${variantClassName[variant]} ${className}`
 
   if (href) {
     return (
       <a
+        aria-label={ariaLabel}
         href={href}
         target={isBlank ? "_blank" : target}
         onClick={onClick}
